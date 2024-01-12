@@ -103,7 +103,7 @@ defp read_user do
         email: String.trim(email),
         age: String.to_interger(String.trim(age))
       }
-      changeset = User.changeset (user, params)
+      changeset = User.changeset(user, params)
       case Repo.update(changeset) do
         {:ok, user} ->
           IO.puts("Usuário atualizado com sucesso!")
